@@ -4,4 +4,6 @@ const controller = require('../controller')
 
 routes.get('/', controller.myFunction);
 
+routes.get('/awesome', controller.awesomeFunction);
+
 module.exports = routes
