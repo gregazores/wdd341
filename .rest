@@ -2,6 +2,10 @@
 
 ###  LOCALHOST 
 
+GET http://localhost:8080/
+
+###
+
 GET http://localhost:8080/contacts 
 
 ### 
@@ -12,6 +16,19 @@ GET http://localhost:8080/contacts/63fbf9ee97070e2d0dce4e8a
 
 ### 
 GET http://localhost:8080/contacts/63fbfa0f97070e2d0dce4e8b
+
+### 
+
+GET https://cse341-birch-406e.onrender.com/contacts
+
+### 
+GET https://cse341-birch-406e.onrender.com/contacts/63fbf62a97070e2d0dce4e89
+
+### 
+GET https://cse341-birch-406e.onrender.com/contacts/63fbf9ee97070e2d0dce4e8a
+
+### 
+GET https://cse341-birch-406e.onrender.com/contacts/63fbfa0f97070e2d0dce4e8b
 
 
 

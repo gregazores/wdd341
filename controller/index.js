@@ -18,7 +18,12 @@ const getSingle = async (req, res, next) => {
   });
 };
 
-module.exports = { getAll, getSingle };
+function rootResponse(req, res) {
+    res.send('CSE 341 API')
+}
+
+
+module.exports = { getAll, getSingle, rootResponse};
 
 
 

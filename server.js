@@ -11,7 +11,7 @@ const router = require('./routes');
 //import our connection model
 const mongodb = require('./library/connections');
 //set up the port to be compatible with site environment
-const port = process.env.PORT || 8080;
+// const port = process.env.PORT || 8080;
 
 
 //app.use is going  to run before app.get, app.post etc

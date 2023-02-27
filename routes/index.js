@@ -6,7 +6,12 @@ const router = express.Router();
 //in the /contacts endpoint, make sure to include 
 //our contacts router
 const contactsRouter = require('./contacts');
+//import the contactsController here
+const contactsController = require('../controller');
+
 router.use('/contacts', contactsRouter)
+
+router.get('/', contactsController.rootResponse);
 
 module.exports = router;
 
