@@ -3,27 +3,42 @@
 const model = require('../model/main-model');
 
 const getAll = async (req, res, next) => {
-  const result = await model.mongoCollection(req, res, next)
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists);
-  });
+  await model.mongoCollection(req, res, next)
+
 };
 
 const getSingle = async (req, res, next) => {
-  const result = await model.mongoSingle(req, res, next)
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists[0]);
-  });
+  await model.mongoSingle(req, res, next)
 };
 
-function rootResponse(req, res) {
+const createContact = async (req, res, next) => {
+  console.log(req.body)
+  await model.insertMongo(req, res, next);
+};
+
+const updateContact = async (req, res, next) => {
+  await model.updateMongo(req, res, next);
+};
+
+const deleteContact = async (req, res, next) => {
+  await model.deleteMongo(req, res, next);
+};
+
+
+
+function rootResponse(req, res, next) {
     res.send('CSE 341 API')
-}
+};
 
 
-module.exports = { getAll, getSingle, rootResponse};
+module.exports = { 
+  getAll, 
+  getSingle, 
+  rootResponse,
+  createContact,
+  updateContact,
+  deleteContact
+};
 
 
 

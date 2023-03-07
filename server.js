@@ -5,6 +5,8 @@ const express = require('express');
 const app = express();
 //Parse incoming request bodies in a middleware before 
 //your handlers, available under the req.body property.
+//body-parser helps us decode the body from an HTTP request
+//$ npm install --save body-parser
 //const bodyParser = require('body-parser');
 //import the router
 const router = require('./routes');
@@ -25,6 +27,12 @@ const mongodb = require('./library/connections');
 app.use(express.urlencoded({extended: false}))
 //so we can use json data as well
 app.use(express.json())
+//we can configure body-parser by importing it and passing it to the app.use method
+// // Configuring body parser middleware
+//What the body-parser middleware will be doing is grabbing the HTTP body, 
+//decoding the information, and appending it to the req.body
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
 
 //CORS Headers
 app.use((req, res, next) => {

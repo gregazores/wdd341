@@ -11,4 +11,10 @@ router.get('/', contactsController.getAll);
 //listen for get request on /contacts/:id
 router.get('/:id', contactsController.getSingle);
 
+router.post('/', contactsController.createContact);
+
+router.put('/:id', contactsController.updateContact);
+
+router.delete('/:id', contactsController.deleteContact);
+
 module.exports = router;
