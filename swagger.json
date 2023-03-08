@@ -44,26 +44,11 @@
             {
                 "name": "body",
                 "in": "body",
-                "schema":{
-                    "type": "object",
-                    "properties": {
-                        "firstName": {
-                            "example": "Ashley"
-                        },
-                        "lastName": {
-                            "example": "Weaver"
-                        },
-                        "email": {
-                            "example": "aWeaver@test.com"
-                        },
-                        "favoriteColor": {
-                            "example": "Brown"
-                        },
-                        "birthday": {
-                            "example": "06/19/2000"
-                        }
-                    }
+                "required": true,
+                "schema": {
+                    "$ref": "#/components/schemas/users"
                 }
+                    
             }
         ],
         "responses": {}
@@ -92,6 +77,14 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+                "$ref": "#/components/schemas/users"
+            }
           }
         ],
         "responses": {}
@@ -110,5 +103,30 @@
         "responses": {}
       }
     }
-  }
+  },
+
+  "components": {
+    "schemas": {
+        "users": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "example": "Ashley22"
+                },
+                "lastName": {
+                    "example": "Weaver"
+                },
+                "email": {
+                    "example": "aWeaver@test.com"
+                },
+                "favoriteColor": {
+                    "example": "Brown"
+                },
+                "birthday": {
+                    "example": "06/19/2000"
+                }
+            }
+        }
+    }
+}
 }

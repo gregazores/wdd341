@@ -1,0 +1,26 @@
+{
+    "components": {
+        "schemas": {
+            "users": {
+                "type": "object",
+                "properties": {
+                    "firstName": {
+                        "example": "Ashley"
+                    },
+                    "lastName": {
+                        "example": "Weaver"
+                    },
+                    "email": {
+                        "example": "aWeaver@test.com"
+                    },
+                    "favoriteColor": {
+                        "example": "Brown"
+                    },
+                    "birthday": {
+                        "example": "06/19/2000"
+                    }
+                }
+            }
+        }
+    }
+}
