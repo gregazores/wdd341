@@ -52,7 +52,7 @@ POST https://cse341-birch-406e.onrender.com/contacts HTTP/1.1
 content-type: application/json
 
 {
-"firstName":"Ashley22", "lastName":"Weaver22", "email":"aWeaver@test.com", "favoriteColor":"Brown", "birthday":"06/19/2000"
+"firstName":"Ashley2233", "lastName":"Weaver2233", "email":"aWeaver@test.com", "favoriteColor":"Brown", "birthday":"06/19/2000"
 }
 
 ### PUT contact 
@@ -60,28 +60,11 @@ PUT https://cse341-birch-406e.onrender.com/63fbf62a97070e2d0dce4e89 HTTP/1.1
 content-type: application/json
 
 {
-"firstName":"Sarah", "lastName":"Birch", "email":"amazingwoman@test.com", "favoriteColor":"Green", "birthday":"12/12/20"
+"firstName":"Sarah", "lastName":"Birch33", "email":"amazingwoman@test.com", "favoriteColor":"Green", "birthday":"12/12/20"
 } 
 
 ### DELETE contact 
-DELETE https://cse341-birch-406e.onrender.com/640727c84879ab1b24567f4e HTTP/1.1
+DELETE https://cse341-birch-406e.onrender.com/6407f791725f6a9f7b09bebb HTTP/1.1
 
 
 
-
-
-
-###
-GET http://localhost:3000/ HTTP/1.1url
-
-### 
-
-GET http://localhost:3000/awesome HTTP/1.1url
-
-###
-
-GET https://cse341-birch-406e.onrender.com/ HTTP/1.1url
-
-### 
-
-GET https://cse341-birch-406e.onrender.com/awesome HTTP/1.1url
