@@ -1,0 +1,114 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Contacts API",
+    "version": "0.0.1",
+    "description": "REST CONTACTS API (WDD341) by Greg Azores",
+    "termsOfService": "http://swagger.io/terms/"
+  },
+  "host": "cse341-birch-406e.onrender.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "tags": [
+      {
+          "name": "Contacts",
+          "description": "Requests using the contacts endpoint"
+      }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": ["Contacts"],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/contacts/": {
+      "get": {
+        "tags": ["Contacts"],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      },
+      "post": {
+        "tags": ["Contacts"],
+        "description": "Create a new contactss.",
+        "parameters": [
+            {
+                "name": "body",
+                "in": "body",
+                "schema":{
+                    "type": "object",
+                    "properties": {
+                        "firstName": {
+                            "example": "Ashley"
+                        },
+                        "lastName": {
+                            "example": "Weaver"
+                        },
+                        "email": {
+                            "example": "aWeaver@test.com"
+                        },
+                        "favoriteColor": {
+                            "example": "Brown"
+                        },
+                        "birthday": {
+                            "example": "06/19/2000"
+                        }
+                    }
+                }
+            }
+        ],
+        "responses": {}
+      }
+    },
+    "/contacts/{id}": {
+      "get": {
+        "tags": ["Contacts"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      },
+      "put": {
+        "tags": ["Contacts"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      },
+      "delete": {
+        "tags": ["Contacts"],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    }
+  }
+}

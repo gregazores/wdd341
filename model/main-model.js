@@ -38,6 +38,7 @@ async function insertMongo(req, res, next) {
 
     const response = await mongodb.getDb().db().collection('contacts').insertOne(contact);
     if (response.acknowledged) {
+      res.setHeader('Content-Type', 'application/json');
       res.status(201).json(response);
     } else {
       res.status(500).json(response.error || 'Some error occurred while creating the contact.');
@@ -61,6 +62,7 @@ async function updateMongo(req, res, next) {
       .replaceOne({ _id: userId }, contact);
     console.log(response);
     if (response.modifiedCount > 0) {
+      res.setHeader('Content-Type', 'application/json');
       res.status(204).send();
     } else {
       res.status(500).json(response.error || 'Some error occurred while updating the contact.');
@@ -72,6 +74,7 @@ async function deleteMongo(req, res, next) {
     const response = await mongodb.getDb().db().collection('contacts').deleteOne({ _id: userId }, true);
     console.log(response);
     if (response.deletedCount > 0) {
+      res.setHeader('Content-Type', 'application/json');
       res.status(204).send();
     } else {
       res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
