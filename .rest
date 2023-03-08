@@ -30,7 +30,7 @@ content-type: application/json
 } 
 
 ### DELETE contact 
-DELETE http://localhost:8080/contacts/640727c84879ab1b24567f4e HTTP/1.1
+DELETE http://localhost:8080/contacts/6407f770725f6a9f7b09beba HTTP/1.1
 
 
 
@@ -56,7 +56,7 @@ content-type: application/json
 }
 
 ### PUT contact 
-PUT https://cse341-birch-406e.onrender.com/63fbf62a97070e2d0dce4e89 HTTP/1.1 
+PUT https://cse341-birch-406e.onrender.com/contacts/63fbf62a97070e2d0dce4e89 HTTP/1.1 
 content-type: application/json
 
 {
@@ -64,7 +64,7 @@ content-type: application/json
 } 
 
 ### DELETE contact 
-DELETE https://cse341-birch-406e.onrender.com/6407f791725f6a9f7b09bebb HTTP/1.1
+DELETE https://cse341-birch-406e.onrender.com/contacts/6407f8c0725f6a9f7b09bebc HTTP/1.1
 
 
 
